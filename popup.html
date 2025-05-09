@@ -1,15 +1,69 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <style>
-      body { font-family: sans-serif; padding: 10px; width: 220px; }
-      button { width: 100%; padding: 8px; margin-bottom: 6px; font-size: 14px; }
-    </style>
-  </head>
-  <body>
-    <button id="btnPaso1">Llenar Paso 1</button>
-    <button id="btnPaso2">Llenar Paso 2</button>
-    <button id="btnPaso3">Llenar Paso 3</button>
-    <script src="popup.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>AutoFormulario QA</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      margin: 10px;
+      min-width: 300px;
+    }
+    .btn-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+    .btn-grid button {
+      padding: 6px;
+      font-size: 13px;
+    }
+
+    h3 {
+      margin-top: 16px;
+      margin-bottom: 4px;
+    }
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 8px;
+    }
+    .btn-group button {
+      flex: 1;
+      padding: 6px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <h3>Registro de usuario</h3>
+  <div class="btn-group">
+    <button id="btnRegistro">Registrar Email</button>
+  </div>
+  <h3>Paso 1 - Tipo de usuario veriff</h3>
+  <div class="btn-grid">
+    <button id="btnPaso1VeriffAprobado">Aprobado</button>
+    <button id="btnPaso1VeriffRechazado">Rechazado</button>
+    <button id="btnPaso1VeriffManual">Manual</button>
+    <button id="btnPaso1Facematch">Facematch</button>
+  </div>
+
+  <h3>Paso 2 - Domicilio</h3>
+  <div class="btn-group">
+    <button id="btnPaso2">Llenar Domicilio</button>
+  </div>
+
+  <h3>Paso 3 - Ingresos</h3>
+  <div class="btn-group">
+    <button id="btnPaso3">Llenar Ingresos</button>
+  </div>
+
+  <h3>Paso 4 - Verificación</h3>
+  <div class="btn-group">
+    <button id="btnPaso4">Verificación NIP</button>
+  </div>
+  <script src="popup.js"></script>
+</body>
 </html>
